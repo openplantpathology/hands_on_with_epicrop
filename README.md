@@ -3,6 +3,13 @@ Hands on with epicrop
 Adam H. Sparks
 31/08/2021
 
+This will install *epicrop* from GitHub if you do not already have it
+installed.
+
+You can click “Knit” at the top of the window to see the final document
+or browse the file on GitHub,
+<https://github.com/openplantpathology/hands_on_with_epicrop>.
+
 ``` r
 if (!require("remotes"))
   install.packages("remotes")
@@ -48,7 +55,9 @@ library("epicrop")
     The date that the crop emerges, or if transplanted rice, is
     transplanted.
 
--   `onset` The expected number of days until the onset of disease after
+-   `onset`
+
+    The expected number of days until the onset of disease after
     emergence date (day, integer). Described in Table 1 of Savary *et
     al.* 2012.
 

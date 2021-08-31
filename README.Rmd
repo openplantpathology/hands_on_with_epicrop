@@ -9,6 +9,10 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+This will install _epicrop_ from GitHub if you do not already have it installed.
+
+You can click "Knit" at the top of the window to see the final document or browse the file on GitHub, <https://github.com/openplantpathology/hands_on_with_epicrop>.
+
 ```{r, eval=FALSE}
 if (!require("remotes"))
   install.packages("remotes")
