@@ -9,6 +9,13 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, eval=FALSE}
+if (!require("remotes"))
+  install.packages("remotes")
+remotes::install_github("adamhsparks/epicrop",
+ build_vignettes = TRUE)
+```
+
 We have seen how the "EPIRICE" model works and discussed the theory behind the SEIR model that drives it.
 Now we will work with the R package and examine some of these different factors to gain a better understanding of how the model works.
 
@@ -31,7 +38,7 @@ library("epicrop")
   _epicrop_ has relatively simple needs for weather to run the model.
   Daily temperature, relative humidity and rainfall are all that are required.
   
-  _epicrop_ has a built-in function, `get_wth()` that will automatically fetch and format the weather data for use in `SEIR()` (or any of the     other specialised functions for modelling disease) from two possible databases.
+  _epicrop_ has a built-in function, `get_wth()` that will automatically fetch and format the weather data for use in `SEIR()` (or any of the other specialised functions for modelling disease) from two possible databases.
   The default database is the NASA POWER API, <https://power.larc.nasa.gov>.
   The optional database is the CHIRPS and CHIRTS APIs, <https://chc.ucsb.edu/data>.
 
@@ -40,6 +47,7 @@ library("epicrop")
   The date that the crop emerges, or if transplanted rice, is transplanted.
   
 * `onset`
+
    The expected number of days until the onset of disease after emergence date (day, integer).
    Described in Table 1 of Savary _et al._ 2012.
   

@@ -3,6 +3,13 @@ Hands on with epicrop
 Adam H. Sparks
 31/08/2021
 
+``` r
+if (!require("remotes"))
+  install.packages("remotes")
+remotes::install_github("adamhsparks/epicrop",
+ build_vignettes = TRUE)
+```
+
 We have seen how the “EPIRICE” model works and discussed the theory
 behind the SEIR model that drives it. Now we will work with the R
 package and examine some of these different factors to gain a better
